@@ -6,3 +6,4 @@ Study Room for [AHB_lite Project](https://open.kakao.com/o/givnsFvf)
     namu00
 ### 2. Slave Design
     verilogHDL
+    Kelvinlee501
