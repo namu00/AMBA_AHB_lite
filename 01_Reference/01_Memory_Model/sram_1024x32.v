@@ -25,13 +25,12 @@ module sram_1024x32
     /**********************************************************/
 
     reg     [31:0]  sram [0:1023];
-    reg     [31:0]  q_r;
     reg     [9:0]   addr_r;
 
     /* write */
     always @ (posedge clk) begin
         if (wren) begin
-            sram <= data;
+            sram[addr] <= data;
         end
         addr_r <= addr; 
     end
