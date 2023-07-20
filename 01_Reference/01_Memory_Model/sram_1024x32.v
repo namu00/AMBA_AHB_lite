@@ -17,7 +17,7 @@ module sram_1024x32
     /**********************************************************/
     generate
     genvar  idx;
-    for (idx = 0; idx < 1024; idx = idx+1) begin: datamem
+    for (idx = 0; idx < 1024; idx = idx+1) begin
        wire [31:0] mem_sell;
        assign mem_sell = sram[idx];
     end
