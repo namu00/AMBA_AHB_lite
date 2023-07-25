@@ -25,7 +25,7 @@ module sram_1024x32
     /* write */
     always @ (posedge clk) begin
         if (wren) begin
-            sram <= data;
+            sram[addr] <= data;
         end
         addr_r <= addr; 
     end
