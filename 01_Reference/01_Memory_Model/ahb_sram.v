@@ -38,8 +38,8 @@ module ahb_sram
     always @ (posedge clk) begin
         if (wren) begin
             casex(b_en)
-                4'bxxx1 : sram[addr] <= (BYTE_7_0 & data) | (~BYTE_7_0 & sram[addr]);
-                4'bxx10 : sram[addr] <= (BYTE_15_8 & data) | (~BYTE_15_8 & sram[addr]);
+                4'bxxx1 : sram[addr] <= (BYTE_7_0 & data)   | (~BYTE_7_0 & sram[addr]);
+                4'bxx10 : sram[addr] <= (BYTE_15_8 & data)  | (~BYTE_15_8 & sram[addr]);
                 4'bx100 : sram[addr] <= (BYTE_23_16 & data) | (~BYTE_23_16 & sram[addr]);
                 4'b1000 : sram[addr] <= (BYTE_31_24 & data) | (~BYTE_31_24 & sram[addr]);
                 default : sram[addr] <= 32'dx;
